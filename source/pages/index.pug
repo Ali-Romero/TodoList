@@ -1,0 +1,25 @@
+extends ../layouts/default.pug
+
+block content
+  //- .container
+  //-   .row.mb-5
+  //-     .col-10
+  //-       input(type="text" placeholder="Название задания").form-control.js-input
+  //-     .col-2
+  //-       button.btn.btn-primary.js-button Добавить
+
+  //-   ul.list-group.js-list
+  //-     li.list-item
+  //-       .list-group-item
+  //-         button(type="button" class="btn-close" aria-label="Close").list-group-item__btn.js-delete
+
+  .content
+    .content__inner
+      .content__todo
+        .todo
+          .todo__header
+            label.todo__input-label
+              input(type="text" placeholder="Написать задачу").todo__input.js-input
+            button.todo__btn.js-button Добавить задачу
+          ul(type="I").todo__list.js-list
+    

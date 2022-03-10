@@ -1,0 +1,13 @@
+extends ../layouts/base.pug
+include ../components/Icon.pug
+
+block body
+  .page
+    .page__header
+      include ../components/Header
+
+    .page__content
+      block content
+
+    .page__footer
+      include ../components/Footer
