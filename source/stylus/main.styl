@@ -1,5 +1,12 @@
+@font-face
+  font-family: "Ubuntu"
+  src: url('../fonts/Ubuntu-Light.woff'), url('../fonts/Ubuntu-Light.woff2')
+  font-display: swap
+
+
 @import 'common/variables'
 @import 'common/*'
+
 
 .page
   display: flex
@@ -9,99 +16,117 @@
   &__content
     flex: 1
     background: rgb(214, 147, 130)
+
 .content
   &__inner
     display: flex
     justify-content: center
     align-items: center
     padding: 30px
+
   &__todo
     max-width: 500px
     width: 100%
     background-color: rgb(56, 50, 50)
     border-radius: 20px
-    padding: 30px
+    padding: 17px
     box-shadow: 0px 0px 8px 5px rgba(49, 49, 49, 0.38)
+
+    +above($breakpoints.sm)
+      padding: 30px
 
 .todo
   display: flex
   justify-content: center
   flex-direction: column
+
   &__header
     max-width: 300px
     width: 100%
     display: flex
     flex-direction: column
     align-self: center
+    padding-bottom: 15px
+
   &__input-label
-    display: block;
-    margin-bottom: 0.25rem;
+    display: block
+    margin-bottom: 20px
+
   &__input
-    display: block;
-    width: 100%;
+    display: block
+    width: 100%
     padding: 10px
-    font-family: inherit;
     font-size: 16px
-    font-weight: 400;
-    color: #212529;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #bdbdbd;
-    border-radius: 0.25rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    font-weight: 400
+    color: $color-dark
+    background-color: $color-white
+    background-clip: padding-box
+    border: 1px solid $color-grey
+    border-radius: 0.25rem
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+
   &__input::placeholder
-    color: #212529;
-    opacity: 0.4;
+    color: $color-dark
+    opacity: 0.4
     font-size: 13px
     letter-spacing: 0.8px
+
   &__input:focus
-    color: #212529;
-    background-color: #fff;
+    color: $color-dark
+    background-color: $color-white
     border-color: #bdbdbd;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
-  &__btn
-    background-color: rgb(55, 190, 243)
-    font-weight: 600
-    margin-bottom: 10px
-    position: relative
-    padding: 7px
-    top: 0
-    font-size: 15px
-    line-height: 18px
-    &:hover
-      background-color:rgba(77, 238, 246, 1)
-    &:active
-      background-color:rgb(108, 233, 240)
-      top: -1px
-  &__list
-    list-style-type: square
+    box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25)
+
   &__item
-    padding: 5px
-    display: flex
-    justify-content: space-between
-    align-items: center
-    color: white
-    transition: all 0.3s
+    padding: 8px
+    color: $color-white
+    transition: all 0.4s
     font-size: 15px
     line-height: 18px
     letter-spacing: 1px
+    list-style: none
+    position: relative
+    right: 0
+
     &:hover
-      box-shadow: 0px 0px 0px 2px rgba(77, 238, 246, 1)
+      right: 0.7px
+      box-shadow: 0px 2px 1px -1px rgba(125, 244, 233, 1)
 
   &__item-container
-    // 
+    display: flex
+    justify-content: space-between
+    align-items: center
+
   &__item-remove
     border-radius: 100%
     text-align: center
-    width: 16px
-    height: 16px
+    width: 18px
+    height: 20px
     display: flex
     justify-content: center
     align-items: center
     cursor: pointer
+
   &__item-remove:hover path
     transition: all 0.3s
-    fill: rgb(130, 255, 28)
-button
-  border: none
+    fill: $color-blue
+
+  &__footer
+    align-self: center
+    padding-top: 10px
+    max-width: 350px
+    display: flex
+    justify-content: center
+    width: 100%
+
+  &__clear
+    display: flex
+    justify-content: space-around
+    width: 100%
+
+.js-marked
+  text-decoration: line-through
+  text-decoration-color: red
+  color: $color-blue
+  font-style: italic

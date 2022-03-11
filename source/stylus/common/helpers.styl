@@ -1,2 +1,29 @@
-.helpers
-  color: red
+.btn
+  font-family: $base-font-family
+  background-color: $color-blue
+  font-weight: bold
+  position: relative
+  padding: 7px
+  top: 0
+  border: none
+  border-radius: 2px
+  cursor: pointer
+  &--big
+    font-size: 14px
+    line-height: 16px
+    +above($breakpoints.sm)
+      font-size: 15px
+      line-height: 18px
+  &--small
+    font-size: 11px
+    line-height: 12px
+    +above($breakpoints.sm)
+      font-size: 13px
+      line-height: 15px
+
+  &:hover
+    background-color:rgb(74 198 246)
+
+  &:active
+    background-color:rgb(102 206 246)
+    top: 1.2px
